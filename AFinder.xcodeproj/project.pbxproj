@@ -46,7 +46,6 @@
 		254827D525CFCE1000268327 /* OBStepThreeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254827CE25CFCE1000268327 /* OBStepThreeWireFrame.swift */; };
 		254827DD25CFCF2B00268327 /* AnimationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254827DC25CFCF2B00268327 /* AnimationWrapper.swift */; };
 		256143E825D059AF00F851E7 /* no_airports_found.json in Resources */ = {isa = PBXBuildFile; fileRef = 256143E625D059AF00F851E7 /* no_airports_found.json */; };
-		256143E925D059AF00F851E7 /* gps_permission.json in Resources */ = {isa = PBXBuildFile; fileRef = 256143E725D059AF00F851E7 /* gps_permission.json */; };
 		256143F125D059E600F851E7 /* no_gps.json in Resources */ = {isa = PBXBuildFile; fileRef = 256143F025D059E600F851E7 /* no_gps.json */; };
 		256143F725D0610400F851E7 /* NotiNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256143F625D0610400F851E7 /* NotiNames.swift */; };
 		256143FF25D0616900F851E7 /* OnboardingSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256143FE25D0616900F851E7 /* OnboardingSteps.swift */; };
@@ -67,6 +66,7 @@
 		2561444325D0E1E300F851E7 /* AirportPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2561444225D0E1E300F851E7 /* AirportPin.swift */; };
 		2561444C25D0E7DB00F851E7 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2561444B25D0E7DB00F851E7 /* LocationHelper.swift */; };
 		2561445225D1053500F851E7 /* RadiusRangeValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2561445125D1053500F851E7 /* RadiusRangeValues.swift */; };
+		256188D425D204A50040010D /* gps_permission.json in Resources */ = {isa = PBXBuildFile; fileRef = 256188D325D204A50040010D /* gps_permission.json */; };
 		25899F8425D19B2500C7F043 /* connection_lost.json in Resources */ = {isa = PBXBuildFile; fileRef = 25899F8325D19B2500C7F043 /* connection_lost.json */; };
 		25899F8925D1A3FB00C7F043 /* AFPrimaryCircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25899F8825D1A3FB00C7F043 /* AFPrimaryCircularButton.swift */; };
 		25899F8E25D1A86200C7F043 /* AFSecondaryCircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25899F8D25D1A86200C7F043 /* AFSecondaryCircularButton.swift */; };
@@ -162,7 +162,6 @@
 		254827CE25CFCE1000268327 /* OBStepThreeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBStepThreeWireFrame.swift; sourceTree = "<group>"; };
 		254827DC25CFCF2B00268327 /* AnimationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationWrapper.swift; sourceTree = "<group>"; };
 		256143E625D059AF00F851E7 /* no_airports_found.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_airports_found.json; sourceTree = "<group>"; };
-		256143E725D059AF00F851E7 /* gps_permission.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = gps_permission.json; path = "../../../../AFind assets/gps_permission.json"; sourceTree = "<group>"; };
 		256143F025D059E600F851E7 /* no_gps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_gps.json; sourceTree = "<group>"; };
 		256143F625D0610400F851E7 /* NotiNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiNames.swift; sourceTree = "<group>"; };
 		256143FE25D0616900F851E7 /* OnboardingSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSteps.swift; sourceTree = "<group>"; };
@@ -183,6 +182,7 @@
 		2561444225D0E1E300F851E7 /* AirportPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportPin.swift; sourceTree = "<group>"; };
 		2561444B25D0E7DB00F851E7 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		2561445125D1053500F851E7 /* RadiusRangeValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusRangeValues.swift; sourceTree = "<group>"; };
+		256188D325D204A50040010D /* gps_permission.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gps_permission.json; sourceTree = "<group>"; };
 		25899F8325D19B2500C7F043 /* connection_lost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = connection_lost.json; sourceTree = "<group>"; };
 		25899F8825D1A3FB00C7F043 /* AFPrimaryCircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFPrimaryCircularButton.swift; sourceTree = "<group>"; };
 		25899F8D25D1A86200C7F043 /* AFSecondaryCircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFSecondaryCircularButton.swift; sourceTree = "<group>"; };
@@ -278,10 +278,10 @@
 		2548273E25CFA88A00268327 /* LottieAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				256188D325D204A50040010D /* gps_permission.json */,
 				25899F8325D19B2500C7F043 /* connection_lost.json */,
 				2561440325D099FC00F851E7 /* airplane_landing.json */,
 				256143F025D059E600F851E7 /* no_gps.json */,
-				256143E725D059AF00F851E7 /* gps_permission.json */,
 				256143E625D059AF00F851E7 /* no_airports_found.json */,
 				2548273F25CFA8A200268327 /* welcome_airplane.json */,
 			);
@@ -654,10 +654,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				256143E925D059AF00F851E7 /* gps_permission.json in Resources */,
 				25899FDB25D1D96400C7F043 /* SettingsView.storyboard in Resources */,
 				2548276825CFB1D300268327 /* OnboardingView.storyboard in Resources */,
 				256143F125D059E600F851E7 /* no_gps.json in Resources */,
+				256188D425D204A50040010D /* gps_permission.json in Resources */,
 				256143E825D059AF00F851E7 /* no_airports_found.json in Resources */,
 				2561442C25D0C37700F851E7 /* MapView.storyboard in Resources */,
 				25899FA525D1A98C00C7F043 /* ListView.storyboard in Resources */,
