@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View-->
+        <scene sceneID="o9U-c3-9UB">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeView" id="caf-l5-Fc8" customClass="WelcomeView" customModule="AFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cxe-Fb-xMR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport Finder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCB-Ql-UO1">
+                                <rect key="frame" x="32" y="76" width="240" height="41.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just find it!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDG-Op-8xT">
+                                <rect key="frame" x="32" y="125.5" width="115" height="28"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njC-3x-C2a" customClass="AFPrimaryButton" customModule="AFinder" customModuleProvider="target">
+                                <rect key="frame" x="32" y="790" width="350" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="O46-vC-VLa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="SVT-ML-H9t"/>
+                                </constraints>
+                                <state key="normal" title="Let's go!"/>
+                                <connections>
+                                    <action selector="openOnboardingAction:" destination="caf-l5-Fc8" eventType="touchUpInside" id="00V-1X-ci1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-1x-OjB">
+                                <rect key="frame" x="32" y="185.5" width="350" height="572.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V9e-qv-agY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V9e-qv-agY" firstAttribute="trailing" secondItem="njC-3x-C2a" secondAttribute="trailing" constant="32" id="29Y-PE-8p9"/>
+                            <constraint firstItem="eDG-Op-8xT" firstAttribute="leading" secondItem="pCB-Ql-UO1" secondAttribute="leading" id="DDd-bb-fL3"/>
+                            <constraint firstItem="njC-3x-C2a" firstAttribute="top" secondItem="8OA-1x-OjB" secondAttribute="bottom" constant="32" id="DuZ-9F-J4V"/>
+                            <constraint firstItem="njC-3x-C2a" firstAttribute="leading" secondItem="V9e-qv-agY" secondAttribute="leading" constant="32" id="HGk-ye-CUy"/>
+                            <constraint firstItem="pCB-Ql-UO1" firstAttribute="leading" secondItem="V9e-qv-agY" secondAttribute="leading" constant="32" id="Ruh-am-Ul8"/>
+                            <constraint firstItem="eDG-Op-8xT" firstAttribute="top" secondItem="pCB-Ql-UO1" secondAttribute="bottom" constant="8" id="S3g-6g-RXi"/>
+                            <constraint firstItem="V9e-qv-agY" firstAttribute="trailing" secondItem="8OA-1x-OjB" secondAttribute="trailing" constant="32" id="ih8-qh-7UR"/>
+                            <constraint firstItem="8OA-1x-OjB" firstAttribute="top" secondItem="eDG-Op-8xT" secondAttribute="bottom" constant="32" id="ijj-aM-yBU"/>
+                            <constraint firstItem="pCB-Ql-UO1" firstAttribute="top" secondItem="V9e-qv-agY" secondAttribute="top" constant="32" id="lr5-HP-DNN"/>
+                            <constraint firstItem="V9e-qv-agY" firstAttribute="bottom" secondItem="njC-3x-C2a" secondAttribute="bottom" constant="32" id="lv2-wL-BTg"/>
+                            <constraint firstItem="8OA-1x-OjB" firstAttribute="leading" secondItem="V9e-qv-agY" secondAttribute="leading" constant="32" id="xYP-x9-pRy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationContainer" destination="8OA-1x-OjB" id="E56-au-mej"/>
+                        <outlet property="sloganLabel" destination="eDG-Op-8xT" id="GW6-ZQ-uKW"/>
+                        <outlet property="startButton" destination="njC-3x-C2a" id="FOa-HG-kcT"/>
+                        <outlet property="titleLabel" destination="pCB-Ql-UO1" id="Qa5-eR-h4B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxa-bx-5T3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2258" y="7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

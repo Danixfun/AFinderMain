@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View-->
+        <scene sceneID="EPy-tQ-qOU">
+            <objects>
+                <viewController storyboardIdentifier="SettingsView" modalPresentationStyle="overFullScreen" id="fgZ-xd-ipr" customClass="SettingsView" customModule="AFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gup-MD-jBA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-o5-Tun">
+                                <rect key="frame" x="0.0" y="639" width="414" height="257"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq4-HG-EW5" customClass="AFPrimaryButton" customModule="AFinder" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="185" width="350" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XoY-pg-Nda"/>
+                                        </constraints>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="updateMapAction:" destination="fgZ-xd-ipr" eventType="touchUpInside" id="Xgb-fy-kAd"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8M9-U4-XcZ">
+                                        <rect key="frame" x="30" y="139" width="354" height="31"/>
+                                        <color key="minimumTrackTintColor" name="SliderMinColor"/>
+                                        <connections>
+                                            <action selector="updateRange:" destination="fgZ-xd-ipr" eventType="valueChanged" id="1VE-F5-25z"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azz-ha-8sN">
+                                        <rect key="frame" x="32" y="16" width="350" height="41.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPe-Q0-kMW">
+                                        <rect key="frame" x="195.5" y="103" width="23" height="20"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8M9-U4-XcZ" secondAttribute="trailing" constant="32" id="0bA-Ln-eJq"/>
+                                    <constraint firstAttribute="trailing" secondItem="azz-ha-8sN" secondAttribute="trailing" constant="32" id="2h4-Gf-KwB"/>
+                                    <constraint firstItem="azz-ha-8sN" firstAttribute="leading" secondItem="oVv-o5-Tun" secondAttribute="leading" constant="32" id="7K7-qA-vQQ"/>
+                                    <constraint firstItem="Uq4-HG-EW5" firstAttribute="leading" secondItem="oVv-o5-Tun" secondAttribute="leading" constant="32" id="PQj-f4-u9y"/>
+                                    <constraint firstItem="Uq4-HG-EW5" firstAttribute="top" secondItem="8M9-U4-XcZ" secondAttribute="bottom" constant="16" id="RFd-1X-fwi"/>
+                                    <constraint firstItem="8M9-U4-XcZ" firstAttribute="top" secondItem="OPe-Q0-kMW" secondAttribute="bottom" constant="16" id="Vb2-gg-X8r"/>
+                                    <constraint firstItem="azz-ha-8sN" firstAttribute="top" secondItem="oVv-o5-Tun" secondAttribute="top" constant="16" id="Zm8-F7-S40"/>
+                                    <constraint firstItem="OPe-Q0-kMW" firstAttribute="centerX" secondItem="Uq4-HG-EW5" secondAttribute="centerX" id="fy6-qz-8In"/>
+                                    <constraint firstItem="8M9-U4-XcZ" firstAttribute="leading" secondItem="oVv-o5-Tun" secondAttribute="leading" constant="32" id="g6r-bs-eZU"/>
+                                    <constraint firstAttribute="height" constant="257" id="kh5-15-pyb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uq4-HG-EW5" secondAttribute="trailing" constant="32" id="ml2-50-VEW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uq4-HG-EW5" secondAttribute="bottom" constant="32" id="xLr-CK-7FZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rN-2V-eed">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="639"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WRk-Tr-xmD"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7rN-2V-eed" firstAttribute="trailing" secondItem="WRk-Tr-xmD" secondAttribute="trailing" id="3Rf-ma-8PS"/>
+                            <constraint firstItem="oVv-o5-Tun" firstAttribute="trailing" secondItem="WRk-Tr-xmD" secondAttribute="trailing" id="6kG-eO-XYx"/>
+                            <constraint firstAttribute="bottom" secondItem="oVv-o5-Tun" secondAttribute="bottom" id="J5m-4d-ogZ"/>
+                            <constraint firstItem="7rN-2V-eed" firstAttribute="leading" secondItem="WRk-Tr-xmD" secondAttribute="leading" id="Lqa-wg-mCp"/>
+                            <constraint firstItem="7rN-2V-eed" firstAttribute="top" secondItem="gup-MD-jBA" secondAttribute="top" id="QJb-2c-NWC"/>
+                            <constraint firstItem="oVv-o5-Tun" firstAttribute="top" secondItem="7rN-2V-eed" secondAttribute="bottom" id="UYf-6W-6fm"/>
+                            <constraint firstItem="oVv-o5-Tun" firstAttribute="leading" secondItem="WRk-Tr-xmD" secondAttribute="leading" id="ysd-bN-QnI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exitAreaContainer" destination="7rN-2V-eed" id="bGP-Mw-3wX"/>
+                        <outlet property="rangeLabel" destination="azz-ha-8sN" id="dmi-7S-Es9"/>
+                        <outlet property="rangeSlider" destination="8M9-U4-XcZ" id="8Xv-dQ-la5"/>
+                        <outlet property="rangeValueLabel" destination="OPe-Q0-kMW" id="Phi-Wq-KeX"/>
+                        <outlet property="updateActionButton" destination="Uq4-HG-EW5" id="8rR-gT-mKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMh-h0-fLS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="-54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="SliderMinColor">
+            <color red="0.34200000762939453" green="0.69999998807907104" blue="0.91100001335144043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
